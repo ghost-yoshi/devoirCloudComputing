@@ -170,4 +170,4 @@ Le format JSON attendu doit conserver ces champs:
 
 Si tu modifies les noms de champs cote frontend, il faut aussi adapter les schemas dans `app/Backend/api/routes.py`.
 
-Pour Tout autre assistance https://wa.me/237692832311
+Pour Tout autre assistance https://wa.me/237693832311
