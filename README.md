@@ -4,7 +4,7 @@ Application web minimale avec:
 - Backend FastAPI
 - Base de donnees PostgreSQL
 - Frontend HTML/CSS/JS (CRUD simple)
-- Nginx pour reverse proxy
+- Nginx en reverse proxy
 
 ## 1. Architecture
 
@@ -15,7 +15,7 @@ Application web minimale avec:
 - `app/frontend/src/app.js`: appels API CRUD
 - `app/frontend/src/style.css`: style de la page
 - `scripts/setup.sh`: setup local backend + database
-- `requirements.sh`: install systeme + appel du setup
+- `requirements.sh`: installation systeme + appel du setup
 
 ## 2. Prerequis
 
@@ -26,16 +26,14 @@ Application web minimale avec:
 
 ## 3. Installation
 
-### Option A (setup complet)
+### Option A - Setup complet
+
+Depuis le dossier parent de travail:
 
 ```bash
-git clone https://github.com/ghost-yoshi/devoirCloudComputing.git && sudo chmod +x ./requirements.txt
-
-ou
-
-Depuis la racine du projet:
-
-bash
+git clone https://github.com/ghost-yoshi/devoirCloudComputing.git
+cd devoirCloudComputing
+chmod +x requirements.sh scripts/setup.sh
 bash requirements.sh
 ```
 
@@ -47,9 +45,12 @@ Ce script:
 5. Cree la base `devoir_cc`
 6. Cree `.env` avec `DATABASE_URL`
 
-### Option B (deja installe, juste setup projet)
+### Option B - Setup projet seulement
+
+Si les prerequis systeme sont deja installes:
 
 ```bash
+chmod +x scripts/setup.sh
 bash scripts/setup.sh
 ```
 
@@ -94,7 +95,7 @@ Base API: `/api`
 }
 ```
 
-Contraintes validation:
+Contraintes de validation:
 - `name`: 2 a 120 caracteres
 - `email`: 5 a 180 caracteres
 - `message`: 2 a 1000 caracteres
@@ -145,7 +146,7 @@ pg_isready -h 127.0.0.1 -p 5432
 
 ### Erreur import Uvicorn
 
-Toujours lancer avec le module package depuis la racine:
+Toujours lancer depuis la racine avec le module package:
 
 ```bash
 .venv/bin/uvicorn app.Backend.main:app --reload
@@ -167,4 +168,6 @@ Le format JSON attendu doit conserver ces champs:
 - `email`
 - `message`
 
-Si tu changes les noms de champs cote frontend, il faut aussi adapter les schemas dans `app/Backend/api/routes.py`.
+Si tu modifies les noms de champs cote frontend, il faut aussi adapter les schemas dans `app/Backend/api/routes.py`.
+
+Pour Tout autre assistance https://wa.me/237692832311
