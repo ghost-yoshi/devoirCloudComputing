@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Minimal - Devoir CC</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <h1>Formulaire Minimal</h1>
+        <p class="subtitle">FastAPI + PostgreSQL sans authentification</p>
+
+        <form id="submission-form" class="form">
+          <input type="hidden" id="submission-id" />
+
+          <label for="name">Nom</label>
+          <input id="name" name="name" type="text" required minlength="2" />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required minlength="2"></textarea>
+
+          <div class="actions">
+            <button type="submit" id="submit-btn">Ajouter</button>
+            <button type="button" id="cancel-btn" class="ghost" hidden>Annuler</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Entrées</h2>
+        <ul id="submission-list" class="list"></ul>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+  </html>
