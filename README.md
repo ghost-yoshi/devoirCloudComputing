@@ -28,6 +28,11 @@ Application web minimale avec:
 
 ### Option A (setup complet)
 
+```bash
+git clone https://github.com/ghost-yoshi/devoirCloudComputing.git && sudo chmod +x ./requirements.txt ```
+
+ou
+
 Depuis la racine du projet:
 
 ```bash
