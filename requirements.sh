@@ -20,7 +20,7 @@ echo "Done."
 echo " Installation des dépendances python..."
 
 python3 -m venv .venv
-source ./venv/bin/activate
+source ./.venv/bin/activate
 pip install -r ./requirements.txt
 echo "dépendances installés avec succes."
 
