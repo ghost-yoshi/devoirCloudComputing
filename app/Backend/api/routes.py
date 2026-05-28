@@ -6,9 +6,9 @@ from sqlalchemy import select, text
 from sqlalchemy.orm import Session
 
 try:
-    from ..db import Submission, get_db
+    from Backend.db import Submission, get_db
 except ImportError:
-    from db import Submission, get_db
+    from ..db import Submission, get_db
 
 
 router = APIRouter(prefix="/api", tags=["api"])

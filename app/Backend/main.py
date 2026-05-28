@@ -5,12 +5,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-try:
-    from .api.routes import router
-    from .db import Base, engine
-except ImportError:
-    from api.routes import router
-    from db import Base, engine
+from Backend.api.routes import router
+from Backend.db import Base, engine
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -32,6 +28,7 @@ app.add_middleware(
 
 app.include_router(router)
 app.mount("/static", StaticFiles(directory=str(FRONTEND_DIR)), name="static")
+
 
 
 @app.on_event("startup")

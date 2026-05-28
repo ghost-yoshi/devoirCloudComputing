@@ -5,9 +5,11 @@ from sqlalchemy import DateTime, Integer, String, Text, create_engine
 from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column, sessionmaker
 
 
+import os
+
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql+psycopg://postgres:postgres@localhost:5432/devoir_cc",
+    "postgresql+psycopg://postgres:postgres@db:5432/devoir_cc"
 )
 
 engine = create_engine(DATABASE_URL, future=True)
